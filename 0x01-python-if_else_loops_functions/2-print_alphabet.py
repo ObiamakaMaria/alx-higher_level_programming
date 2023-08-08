@@ -1,2 +1,7 @@
 #!/usr/bin/python3
-print("".join(chr(char) for char in range(ord('a'), ord('z') + 1)))
+# 2-print_alphabet.py
+
+"""Print the alphabet in lowercase, not followed by a new line."""
+for letter in range(97, 123):
+    print("{}".format(chr(letter)), end="")
+
