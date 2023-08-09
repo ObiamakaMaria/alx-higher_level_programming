@@ -11,4 +11,3 @@ def uppercase(str):
             first_line = False
         else:
             print("{}".format(c), end="")
-
