@@ -2,12 +2,14 @@
 
 def uppercase(str):
     """Print a string in uppercase."""
-    first_line = True
+    new_word = True
     for c in str:
         if ord('a') <= ord(c) <= ord('z'):
             c = chr(ord(c) - ord('a') + ord('A'))
-        if first_line:
-            print("\n{}".format(c), end="")
-            first_line = False
-        else:
+        if new_word:
             print("{}".format(c), end="")
+            new_word = False
+        else:
+            print(" {}".format(c), end="")
+        if c == ' ':
+            new_word = True
