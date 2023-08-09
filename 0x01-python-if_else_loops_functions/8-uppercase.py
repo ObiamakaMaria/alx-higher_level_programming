@@ -10,6 +10,8 @@ def uppercase(str):
             print("{}".format(c), end="")
             new_word = False
         else:
-            print(" {}".format(c), end="")
-        if c == ' ':
+            print("{}".format(c), end="")
+        if not c.isalpha():
             new_word = True
+    print("") 
+
