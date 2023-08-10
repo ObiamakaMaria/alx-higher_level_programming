@@ -1,4 +1,12 @@
 ###
-This is my first phyton project.
 
-It contains task on string manipulationans also indexing and slicing in Python.
+This is my python Module project.
+
+The task contains concepts on the following:
+
+How to import functions from another file
+How to use imported functions
+How to create a module
+How to use the built-in function dir()
+How to prevent code in your script from being executed when imported
+How to use command line arguments with your Python programs
