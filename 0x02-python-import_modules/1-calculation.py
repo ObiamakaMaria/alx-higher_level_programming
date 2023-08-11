@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    """This script prints the +,-,* & quotient of 10 and 5."""
-
+    """Print the sum, difference, multiple and quotient of 10 and 5."""
     from calculator_1 import add, sub, mul, div
-    #Defining the variables
+
     a = 10
     b = 5
 
