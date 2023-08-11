@@ -13,7 +13,7 @@ if __name__ == "__main__":
     if sys.argv[2] not in list(ope.keys()):
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
-    #casting arguments
+
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     print("{} {} {} = {}".format(a, sys.argv[2], b, ope[sys.argv[2]](a, b)))
