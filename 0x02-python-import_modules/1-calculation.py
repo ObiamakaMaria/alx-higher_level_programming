@@ -3,7 +3,7 @@
 if __name__ == "__main__":
     """This function prints the sum, difference, multiple & quotient of 10 and 5."""
     from calculator_1 import add, sub, mul, div
-
+    #Defining the variables
     a = 10
     b = 5
 
