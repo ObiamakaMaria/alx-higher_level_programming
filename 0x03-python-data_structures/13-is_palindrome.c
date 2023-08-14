@@ -29,42 +29,43 @@ listint_t *reverse_list(listint_t *head)
  * is_palindrome - This function checks if a singly linked list
  * is a palindrome
  * @head: This is a pointer to the head of the list
+ * Description: snail represent slow while hare represents fast.
  * Return: 1 if palindrome, 0 if not
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow = *head;
-	listint_t *fast = *head;
+	listint_t *snail = *head;
+	listint_t *hare = *head;
 	listint_t *first_half = *head;
 	listint_t *second_half = NULL;
-	while (fast != NULL && fast->next != NULL)
+	while (hare != NULL && hare->next != NULL)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
+		snail = snail->next;
+		hare = hare->next->next;
 	}
 
-	if (fast != NULL)
+	if (hare != NULL)
 	{
-		slow = slow->next;
+		snail = snail->next;
 		/* Move slow pointer one step for odd-length lists */
 	}
 
 	/* Reverse the second half of the list */
-	second_half = reverse_list(slow);
+	second_half = reverse_list(snail);
 
 	while (second_half != NULL)
 	{
 		if (first_half->n != second_half->n)
 		{
 
-			reverse_list(slow);
+			reverse_list(snail);
 			return 0;
 		}
 		first_half = first_half->next;
 		second_half = second_half->next;
 	}
 
-	reverse_list(slow);
+	reverse_list(snail);
 
 	return 1;/* Palindrome */
 }
