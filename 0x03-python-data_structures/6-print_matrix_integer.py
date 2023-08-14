@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""This script prints a matrix of integers."""
+
 def print_matrix_integer(matrix=[[]]):
+    """This script prints a matrix of integers."""
     for row in matrix:
         for col in row:
             print("{:d}".format(col), end=" " if col != row[-1] else "")
