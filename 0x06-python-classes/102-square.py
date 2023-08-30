@@ -22,29 +22,29 @@ class Square:
         self.__size = value
 
     def area(self):
-        """Calculates and returns the area of the square."""
+        """This calculates and returns the area of the square."""
         return self.__size ** 2
 
     def __eq__(self, other):
-        """Implements the == comparator based on area."""
+        """This implements the == comparator based on area."""
         return self.area() == other.area()
 
     def __ne__(self, other):
-        """Implements the != comparator based on area."""
+        """This implements the != comparator based on area."""
         return self.area() != other.area()
 
     def __lt__(self, other):
-        """Implements the < comparator based on area."""
+        """This implements the < comparator based on area."""
         return self.area() < other.area()
 
     def __le__(self, other):
-        """Implements the <= comparator based on area."""
+        """This implements the <= comparator based on area."""
         return self.area() <= other.area()
 
     def __gt__(self, other):
-        """Implements the > comparator based on area."""
+        """this implements the > comparator based on area."""
         return self.area() > other.area()
 
     def __ge__(self, other):
-        """Implements the >= comparator based on area."""
+        """This implements the >= comparator based on area."""
         return self.area() >= other.area()
