@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-ef safe_print_list(my_list=[], x=0):
+def safe_print_list(my_list=[], x=0):
     """Prints up to x elements from my_list and returns the actual number of printed elements."""
     try:
         count = 0
