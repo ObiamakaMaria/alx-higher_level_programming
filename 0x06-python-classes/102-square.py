@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """This script defines a custom Square class."""
 
 
