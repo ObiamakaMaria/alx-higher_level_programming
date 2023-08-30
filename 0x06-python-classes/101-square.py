@@ -1,17 +1,19 @@
 #!/usr/bin/python3
-"""This script defines a custom Square class."""
+"""Define a custom Square class."""
 
 
 class Square:
-    """Represent a square object with size attribute and comparison methods."""
+    """Represent a square object with size and position attributes."""
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Initialize a new square instance.
 
         Args:
-            size (int): The size of the new square.
+            size (int): The size of the square.
+            position (int, int): The position of the square.
         """
         self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -25,79 +27,67 @@ class Square:
         Args:
             value (int): The size to be set.
         Raises:
-            TypeError: If size is not a number (integer or float).
+            TypeError: If size is not an integer.
             ValueError: If size is less than 0.
         """
-        if not isinstance(value, (int, float)):
-            raise TypeError("size must be a number")
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    @property
+    def position(self):
+        """Retrieve the position of the square."""
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """Set the position of the square.
+
+        Args:
+            value (tuple): The position to be set.
+        Raises:
+            TypeError: If position is not a tuple of 2 positive integers.
+        """
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def area(self):
         """Calculate and return the area of the square.
 
         Returns:
-            float: The area of the square.
+            int: The area of the square.
         """
         return self.__size * self.__size
 
-    def __eq__(self, other):
-        """Compare if two squares are equal in terms of area.
+    def my_print(self):
+        """Print the square using '#' characters.
 
-        Args:
-            other (Square): The other square to compare with.
-        Returns:
-            bool: True if areas are equal, False otherwise.
+        The square is positioned based on the position attribute.
         """
-        return self.area() == other.area()
+        if self.__size == 0:
+            print()
+            return
 
-    def __ne__(self, other):
-        """Compare if two squares are not equal in terms of area.
+        for _ in range(self.__position[1]):
+            print()
+        for _ in range(self.__size):
+            print(" " * self.__position[0] + "#" * self.__size)
 
-        Args:
-            other (Square): The other square to compare with.
-        Returns:
-            bool: True if areas are not equal, False otherwise.
-        """
-        return self.area() != other.area()
-
-    def __lt__(self, other):
-        """Compare if the area of this square is less than the area of another square.
-
-        Args:
-            other (Square): The other square to compare with.
-        Returns:
-            bool: True if this square's area is less, False otherwise.
-        """
-        return self.area() < other.area()
-
-    def __le__(self, other):
-        """Compare if the area of this square is less than or equal to the area of another square.
-
-        Args:
-            other (Square): The other square to compare with.
-        Returns:
-            bool: True if this square's area is less than or equal, False otherwise.
-        """
-        return self.area() <= other.area()
-
-    def __gt__(self, other):
-        """Compare if the area of this square is greater than the area of another square.
-
-        Args:
-            other (Square): The other square to compare with.
-        Returns:
-            bool: True if this square's area is greater, False otherwise.
-        """
-        return self.area() > other.area()
-
-    def __ge__(self, other):
-        """Compare if the area of this square is greater than or equal to the area of another square.
-
-        Args:
-            other (Square): The other square to compare with.
-        Returns:
-            bool: True if this square's area is greater than or equal, False otherwise.
-        """
-        return self.area() >= other.area()
+    def __str__(self):
+        """Return a string representation of the square."""
+        result = ""
+        if self.__size == 0:
+            result += "\n"
+        else:
+            for _ in range(self.__position[1]):
+                result += "\n"
+            for _ in range(self.__size):
+                result += " " * self.__position[0] + "#" * self.__size
+                result += "\n"
+        return result
