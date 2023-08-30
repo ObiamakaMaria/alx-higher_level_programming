@@ -91,3 +91,7 @@ class Square:
                 result += " " * self.__position[0] + "#" * self.__size
                 result += "\n"
         return result
+
+    def __format__(self, format_spec):
+        """Format the square using specified format."""
+        return str(self).__format__(format_spec)
