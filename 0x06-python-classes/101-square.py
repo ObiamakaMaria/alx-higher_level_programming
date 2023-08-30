@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This defines a custom Square class."""
+"""This Script defines a custom Square class."""
 
 
 class Square:
