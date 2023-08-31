@@ -1,22 +1,22 @@
 #!/usr/bin/python3
 
-def divide_lists_elementwise(list1, list2, length):
+def list_division(my_list_1, my_list_2, list_length):
 
-    """Divides elements of two lists element-wise. """
+    """It divides elements of two lists elements. """
 
-    division_result_list = []
-    for i in range(0, length):
+      latest_list = []
+    for i in range(0, list_length):
         try:
-            div_result = list1[i] / list2[i]
+            div = my_list_1[i] / my_list_2[i]
         except TypeError:
-            print("Error: Incorrect data type")
-            div_result = 0
+            print("wrong type")
+            div = 0
         except ZeroDivisionError:
-            print("Error: Division by zero")
-            div_result = 0
+            print("division by 0")
+            div = 0
         except IndexError:
-            print("Error: Index out of range")
-            div_result = 0
+            print("out of range")
+            div = 0
         finally:
-            division_result_list.append(div_result)
-    return (division_result_list)
+            latest_list.append(div)
+    return (latest_list)
