@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 def safe_print_integer(value):
-
-    """This script print an integer with 
-    "{:d}".format().
+    """It prints an integer with "{:d}".format().
 
     Args:
         value (int): The integer to print.
