@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def custom_magic_calculation(parameter_a, parameter_b):
+def magic_calculation(a, b):
     """Perform a custom magic calculation based on the given parameters."""
 
     magic_result = 0
