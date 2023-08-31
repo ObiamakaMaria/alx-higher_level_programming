@@ -1,21 +1,21 @@
 #!/usr/bin/python3
 
-def print_first_x_integers(input_list=[], num_elements=0):
-    """Safely print the first 'num_elements' integers from a given list.
+def safe_print_list_integers(my_list=[], x=0):
+    """ It prints the first x elements of a list which are integers.
 
     Args:
-        input_list (list): The list containing elements to print from.
-        num_elements (int): The number of integer elements to print.
+        my_list (list): The list to print elements from.
+        x (int): The number of elements of my_list to print.
 
     Returns:
-        int: The count of successfully printed integer elements.
+        The number of (x)elements printed.
     """
-    printed_count = 0
-    for i in range(0, num_elements):
+    element = 0
+    for i in range(0, x):
         try:
-            print("{:d}".format(input_list[i]), end="")
-            printed_count += 1
+            print("{:d}".format(my_list[i]), end="")
+            element += 1
         except (ValueError, TypeError):
             continue
     print("")
-    return printed_count
+    return (element)
