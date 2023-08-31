@@ -15,7 +15,6 @@ def safe_print_integer_err(value):
         When TypeError or ValueError occurs - False.
         Otherwise - True.
     """
-
     try:
         print("{:d}".format(value))
         return (True)
