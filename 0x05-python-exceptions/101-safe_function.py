@@ -2,19 +2,21 @@
 
 import sys
 
-def execute_safely(function, *args):
-    """Safely executes a given function with provided arguments.
+
+def safe_function(fct, *args):
+    """Safely executes a given function[[O.
 
     Args:
-        function: The function to be executed.
-        args: Arguments to be passed to the function.
+        fct: The function to be  executed.
+        args: Arguments to the function.
 
     Returns:
-        Any: The result of the function call if successful, otherwise None.
+        Upon reaching an error - None.
+        Otherwise - result of the call to function.
     """
     try:
-        execution_result = function(*args)
-        return (execution_result)
-    except Exception:
-        print("Error: {}".format(sys.exc_info()[1]), file=sys.stderr)
+        fct_result = fct(*args)
+        return (fct_result)
+    except:
+        print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
         return (None)
