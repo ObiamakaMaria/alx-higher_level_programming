@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def safe_divide(a, b):
+def safe_print_division(a, b):
     """Divide two numbers 'a' by 'b' safely and return the result.
 
     This function attempts to divide 'a' by 'b'.
@@ -11,4 +11,4 @@ def safe_divide(a, b):
         result = None
     finally:
         print("Result of division: {}".format(result))
-    return result
+    return (result)
