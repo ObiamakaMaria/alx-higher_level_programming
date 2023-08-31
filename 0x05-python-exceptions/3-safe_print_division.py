@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 
 def safe_print_division(a, b):
-    """Divide two numbers 'a' by 'b' safely and return the result.
+    """Divide two numbers 'a' by 'b' safely & return the result"""
 
-    This function attempts to divide 'a' by 'b'.
-    """
     try:
         result = a / b
     except (TypeError, ZeroDivisionError):
