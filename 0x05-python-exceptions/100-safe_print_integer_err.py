@@ -2,20 +2,23 @@
 
 import sys
 
-def print_safe_integer(value):
-    """Prints an integer using the "{:d}".format() method.
+def safe_print_integer_err(value):
+    """It prints an integer with "{:d}".format().
 
-    If a ValueError is caught, an appropriate error message is printed to the standard error stream.
+    For a ValueError message read, a corresponding
+    message is printed to (standard error).
 
     Args:
-        value (int): The integer value to be printed.
+        value (int): This the integer to print.
 
     Returns:
-        bool: True if the integer was printed successfully, False if a TypeError or ValueError occurred.
+        When TypeError or ValueError occurs - False.
+        Otherwise - True.
     """
+
     try:
         print("{:d}".format(value))
         return (True)
     except (TypeError, ValueError):
-        print("Error: {}".format(sys.exc_info()[1]), file=sys.stderr)
+        print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
         return (False)
