@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
 def list_division(my_list_1, my_list_2, list_length):
-
-     """It divides two lists element by element.
+    """It divides 2 lists element by element.
 
     Args:
         my_list_1 (list): (The first list).
@@ -10,10 +9,9 @@ def list_division(my_list_1, my_list_2, list_length):
         list_length (int): (The number of elements to divide).
 
     Returns:
-        a new list of length list_length containing all the divisions.
+        A new list of length list_length containing all the divisions.
     """
-
-      latest_list = []
+    latest_list = []
     for i in range(0, list_length):
         try:
             div = my_list_1[i] / my_list_2[i]
