@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 
 
@@ -64,6 +65,7 @@ def solve_n_queens_util(board, col, n):
             board[i][col] = 1
             solve_n_queens_util(board, col + 1, n)
             board[i][col] = 0
+
 
 def solve_n_queens(n):
     """
