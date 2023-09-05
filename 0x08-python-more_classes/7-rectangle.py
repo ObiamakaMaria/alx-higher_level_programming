@@ -48,12 +48,17 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        line1 = str(self.print_symbol) * self.__width + "\n"
-        line2 = (str(self.print_symbol) * self.__width + "\n") * (self.__height - 1)
-        return line1 + line2 + str(self.print_symbol) * self.__width
+        l1 = str(self.print_symbol) * self.__width + "\n"
+        l2 = (
+            (str(self.print_symbol) * self.__width + "\n") *
+            (self.__height - 1)
+        )
+        return l1 + l2 + str(self.print_symbol) * self.__width
 
     def __repr__(self):
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return "{}({}, {})".format(
+            self.__class__.__name__, self.__width, self.__height
+        )
 
     def __del__(self):
         print("Bye rectangle...")
