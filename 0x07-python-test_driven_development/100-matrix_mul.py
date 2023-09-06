@@ -18,7 +18,7 @@ def matrix_mul(m_a, m_b):
     Return:
         The resulting matrix as a list of lists.
     """
-    if m_a == [] or m_a == [[]]:
+     if m_a == [] or m_a == [[]]:
         raise ValueError("m_a can't be empty")
     if m_b == [] or m_b == [[]]:
         raise ValueError("m_b can't be empty")
@@ -55,14 +55,14 @@ def matrix_mul(m_a, m_b):
             new_row.append(m_b[c][r])
         inverted_b.append(new_row)
 
-    newest_matrix = []
+    new_matrix = []
     for row in m_a:
-        newest_row = []
+        new_row = []
         for col in inverted_b:
             prod = 0
             for i in range(len(inverted_b[0])):
                 prod += row[i] * col[i]
             new_row.append(prod)
-        newest_matrix.append(newest_row)
+        new_matrix.append(new_row)
 
-    return newest_matrix
+    return new_matrix
