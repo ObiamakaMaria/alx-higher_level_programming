@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This load python from json file string"""
+"""This script loads python from json file string"""
 import json
 
 
