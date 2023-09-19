@@ -51,9 +51,9 @@ class Rectangle(Base):
     def x(self, value):
         """setting x"""
         if type(value) != int:
-           raise TypeError("x must be an integer")
+            raise TypeError("x must be an integer")
         if value < 0:
-           raise ValueError("x must be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -132,9 +132,10 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Returning  the json in the dictionary form"""
-        return {'id': self.id,
-                 'width': self.width,
-                 'height': self.height,
-                 'x': self.x,
-                 'y': self.y}
-
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
