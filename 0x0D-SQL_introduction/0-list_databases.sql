@@ -1,2 +1,2 @@
--- This creates a databse if not exist.
-CREATE DATABASE IF NOT EXISTS `hbtn_0c_0`;
+-- list shows all the databases on the server
+SHOW DATABASES;
