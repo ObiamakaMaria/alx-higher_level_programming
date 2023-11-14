@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//The print instance creates a rectangle using a X character.
+// The print instance creates a rectangle using a X character.
 module.exports = class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
