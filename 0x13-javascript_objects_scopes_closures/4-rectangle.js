@@ -3,7 +3,7 @@
  * The print instance rints the rectangle using the character X
  * The rotate instance exchanges the width and the height of
  * the rectangle
- * The double instance multiples the width and the height 
+ * The double instance multiples the width and the height
  * of the rectangle by 2
  */
 module.exports = class Rectangle {
