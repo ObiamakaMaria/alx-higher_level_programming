@@ -13,7 +13,6 @@ module.exports = class Rectangle {
       let row = '';
       for (let y = 0; y < this.width; y++) {
         row += 'X';
-
       }
       console.log(row);
     }
