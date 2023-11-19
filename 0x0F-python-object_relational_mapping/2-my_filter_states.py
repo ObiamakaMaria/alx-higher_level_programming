@@ -10,6 +10,5 @@ if __name__ == "__main__":
             ORDER BY `id` ASC".format(sys.argv[4]))
     for x in cursor.fetchall():
         print(x)
-
     cursor.close()
     db.close()
