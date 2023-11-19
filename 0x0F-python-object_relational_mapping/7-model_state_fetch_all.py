@@ -10,7 +10,7 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
 
-    db_Session = sessionmaker(bind=engine)
+    Session = sessionmaker(bind=engine)
     db_session = Session()
 
     query = db_session.query(State).order_by(State.id)
