@@ -1,8 +1,13 @@
 #!/usr/bin/python3
-""" This function finds the peak of an unsorted list of numbers using this 
-search algorithm """
-
+""" This function finds the peak of an unsorted list """
 def find_peak(list_of_integers):
+    """Find a Peak in a list
+
+    Args:
+        list_of_integers: list of int
+    Returns:
+        the value or None
+    """
     if not list_of_integers:
         return None
 
