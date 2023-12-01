@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ This function finds the peak of an unsorted list of numbers using this 
 search algorithm """
 
