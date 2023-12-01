@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""
-Fetches https://alx-intranet.hbtn.io/status using urllib
-"""
-
-from urllib import request
+""" This file gets the content of the URL given programmatically """
 
 if __name__ == "__main__":
+    from urllib import request
+
     url = "https://alx-intranet.hbtn.io/status"
 
     with request.urlopen(url) as response:
