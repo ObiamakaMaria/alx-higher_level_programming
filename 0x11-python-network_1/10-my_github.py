@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""
-Uses the GitHub API to display your user id.
-"""
-if __name__ == "__main__":
+"""This script uses the GitHub API to display your user id."""
+if__name__ == "__main__":
 
     import requests
     import sys
@@ -17,13 +15,13 @@ if __name__ == "__main__":
         url = "https://api.github.com/user"
 
     try:
-        response = requests.get(url, auth=(username, token))
+        resp = requests.get(url, auth=(username, token))
 
-        if response.status_code == 200:
-            user_id = response.json()['id']
+        if resp.status_code == 200:
+            user_id = resp.json()['id']
             print("Your GitHub user id is:", user_id)
         else:
-            print("Error: No info. Status Code:", response.status_code)
+            print("Error: No info. Status Code:", resp.status_code)
 
     except requests.RequestException as e:
         print("Error:", e)
