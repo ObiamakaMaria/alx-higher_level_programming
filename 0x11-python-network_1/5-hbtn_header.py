@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    This script displays the value of the variable X-Request-Id 
+    This script displays the value of the variable X-Request-Id
     in the response header.
 """
 
@@ -9,7 +9,7 @@ if __name__ == "__main__":
     import requests
     import sys
 
-     if len(sys.argv) != 2:
+    if len(sys.argv) != 2:
         print("Usage: {} <URL>".format(sys.argv[0]))
         sys.exit(1)
 
