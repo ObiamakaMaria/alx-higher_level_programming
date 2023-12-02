@@ -5,6 +5,6 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    cmd_args = sys.argv1
-    resp = requests.get(cmd_args[1])
+    option = sys.argv1
+    resp = requests.get(option[1])
     print(resp.headers.get('X-Request-Id'))
