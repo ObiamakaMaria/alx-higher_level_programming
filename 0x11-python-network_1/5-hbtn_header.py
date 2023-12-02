@@ -21,9 +21,3 @@ if __name__ == "__main__":
         if 'X-Request-Id' in response.headers:
             x_request_id = resp.headers['X-Request-Id']
             print(x_request_id)
-        else:
-            print("X-Request-Id not found in the response headers.")
-
-    except requests.RequestException as e:
-        print("Error:", e)
-        sys.exit(1)
