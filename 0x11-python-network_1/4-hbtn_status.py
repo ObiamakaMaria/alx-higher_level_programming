@@ -6,7 +6,6 @@ This script GETS the specified URL & displays the response.
 if __name__ == "__main__":
     import requests
     import sys
-
     url = "https://alx-intranet.hbtn.io/status"
 
     try:
