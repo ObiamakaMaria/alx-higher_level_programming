@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-    This script displays the value of the variable X-Request-Id
-    in the response header.
-"""
-
+""" This script displays the value of the variable X-Request-Id """
 
 if __name__ == "__main__":
     import requests
