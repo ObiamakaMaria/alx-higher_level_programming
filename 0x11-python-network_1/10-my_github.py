@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""get properties from mail"""
+""" This script GET properties from mail"""
 
 if __name__ == '__main__':
     import requests
