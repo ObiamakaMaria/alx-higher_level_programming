@@ -2,7 +2,7 @@
 """This script GETS the specified URL & displays the response."""
 
 if __name__ == "__main__":
-    import requests
+    import urllib.requests
 
     resp = requests.get('https://alx-intranet.hbtn.io/status')
     print('Body response:')
