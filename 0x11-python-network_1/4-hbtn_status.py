@@ -2,8 +2,7 @@
 """This script GETS the specified URL & displays the response."""
 
 if __name__ == "__main__":
-    import urllib.requests
-
+    import requests
     resp = requests.get('https://alx-intranet.hbtn.io/status')
     print('Body response:')
     print('\t- type: {}'.format(type(resp.texp)))
