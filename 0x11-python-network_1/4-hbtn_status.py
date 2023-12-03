@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This script GETS the specified URL & displays the response."""
+"""This GETS the URL & displays the response."""
 
 if __name__ == "__main__":
     import requests
