@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""This GETS the URL & displays the response."""
+"""status with requests"""
 
 if __name__ == "__main__":
     import requests
-    re = requests.get('https://alx-intranet.hbtn.io/status')
+
+    r = requests.get('https://alx-intranet.hbtn.io/status')
     print('Body response:')
-    print('\t- type: {}'.format(type(re.texp)))
-    print('\t- content: {}'.format(re.text))
+    print('\t- type: {}'.format(type(r.text)))
+    print('\t- content: {}'.format(r.text))
