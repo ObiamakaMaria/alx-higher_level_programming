@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"""
-This script GETS the specified URL & displays the response."""
+"""This script GETS the specified URL & displays the response."""
 
 if __name__ == "__main__":
     import requests
 
-    url = "https://alx-intranet.hbtn.io/status"
-    resp = requests.get(url)
+    resp = requests.get('https://alx-intranet.hbtn.io/status')
     print('Body response:')
     print('\t- type: {}'.format(type(r.text)))
     print('\t- content: {}'.format(r.text))
